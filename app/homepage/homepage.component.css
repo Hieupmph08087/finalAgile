@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-item:after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6);
+  }
+  
+  header {
+    padding: 156px 0 100px;
+  }
+  
+  .carousel-caption{
+    bottom: 300px;
+  }
+  
+  .carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+  
+  .carousel-caption a{
+    background: #262626;
+    padding: 10px 30px;
+    display:inline-block;
+    color: #fff;
+  }
+  
+  .image-container{
+    text-align:center;
+  }
+  
+  section {
+    padding: 150px;
+  }
+  section h1{
+    padding: 15px 0; 
+  }
+  section h3{
+    padding: 30px 0; 
+  }
+  section h5{
+    padding: 30px 0;
+   
+  }
+  
+  .services{
+    padding: 150px 0;
+  }
+  
+  .gap50{
+    padding: 50px 0;
+  }
+  
+  @media only screen and (min-width: 320px) {
+   section {
+    padding: 10px;
+  }
+  
+  }
+  
+  .contact{
+    padding: 70px 0;
+    background-color: blueviolet;
+    color: #fff;
+    
+  }
+  
+  .contact a{
+    color: blueviolet;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #fff;
+    text-decoration: none;
+    
+  }
+  
+  .item{
+    padding: 50px 0;
+    width: 250px;
+  }
+  .item-text{
+    padding-top: 30px;
+  }
+  
+  .icon-box i{
+      border: 2px solid rgb(97, 126, 221); 
+    color:rgb(97, 126, 221);
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  .segment-one p{
+    color: #999;
+  
+  }
+
+  .segment-two h2{
+    text-transform: uppercase;
+  
+  }
+  .segment-two h2:before{
+    content: '|';
+    color: #c65039;
+    padding-right: 12px;
+  }
+  .segment-two ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .segment-two ul li{
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    line-height: 40px;
+  }
+  .segment-two ul li a{
+    color: #999;
+    text-decoration: none;
+  }
+  .segment-three h2{
+    text-transform: uppercase;
+  
+  }
+  .segment-three h2:before{
+    content: '|';
+    color: #c65039;
+    padding-right: 12px;
+  }
+  .segment-three a{
+    background-color: #494848;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .segment-three a i{
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 12px;
+  
+  }
+  .footer-bottom-text{
+    color: #fff;
+    text-align: left;
+    padding-left: 85px ;
+    padding-top: 15px;
+  }
+  hr{
+    background-color: #fff;
+    height: 1px;
+  }

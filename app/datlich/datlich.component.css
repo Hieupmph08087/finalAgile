@@ -1,0 +1,130 @@
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
+.bg-img
+{
+    min-height: 100vh;
+width: 100%;
+background: url('/assets/image/bg-3.jpg') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.row{
+    margin-top: 100px;
+}
+/* csss footer */
+
+  .contact{
+   
+    padding: 60px 0;
+    background-color: blueviolet;
+    color: #fff;
+    
+  }
+  
+  .contact a{
+    color: blueviolet;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #fff;
+    text-decoration: none;
+    
+  }
+  
+
+  .icon-box i{
+      border: 2px solid rgb(97, 126, 221); 
+    color:rgb(97, 126, 221);
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  .segment-one p{
+    color: #999;
+  
+  }
+
+  .segment-two h2{
+    text-transform: uppercase;
+  
+  }
+  .segment-two h2:before{
+    content: '|';
+    color: #c65039;
+    padding-right: 12px;
+  }
+  .segment-two ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .segment-two ul li{
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    line-height: 40px;
+  }
+  .segment-two ul li a{
+    color: #999;
+    text-decoration: none;
+  }
+  .segment-three h2{
+    text-transform: uppercase;
+  
+  }
+  .segment-three h2:before{
+    content: '|';
+    color: #c65039;
+    padding-right: 12px;
+  }
+  .segment-three a{
+    background-color: #494848;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .segment-three a i{
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 12px;
+  
+  }
+  .footer-bottom-text{
+    color: #fff;
+    text-align: left;
+    padding-left: 85px ;
+    padding-top: 15px;
+  }
+  hr{
+    background-color: #fff;
+    height: 1px;
+  }

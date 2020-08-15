@@ -1,0 +1,127 @@
+<div class="bg-img">
+    <div class="container">     
+                <div class="d-flex justify-content-center h-100">
+                    <div class="card ">
+                        <div class="card-header">
+                            <h3>Đăng ký</h3>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]="dangkyForm" (ngSubmit)="registerUser()">
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="ID"
+                                        formControlName="staff_id" name="staff_id" [(ngModel)]="staff.staff_id">
+                                </div>
+                                <div *ngIf="staff_id.invalid && (staff_id.touched || staff_id.dirty)">
+                                            
+                                    <p *ngIf="staff_id.errors.required" class="alert alert-danger" role="alert"> Hãy điền ID</p>
+                                    <p *ngIf="staff_id.errors.maxlength; else patternS" class="alert alert-danger" role="alert"> Hãy điền nho hon 5 ký tự</p>
+                                    <ng-template #patternS>
+                                      <p *ngIf="staff_id.errors.pattern" class="alert alert-danger" role="alert">Sai định dạng (không được chứa dấu cách ở đầu) </p>
+                                    </ng-template>
+                                  </div>
+                                  <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Role"
+                                        formControlName="role" name="role" [(ngModel)]="staff.role">
+                                </div>
+                                <div *ngIf="role.invalid && (role.touched || role.dirty)">
+                                                                        
+                                    <p *ngIf="role.errors.pattern" class="alert alert-danger" role="alert"> Hãy điền tu 0 den 2 theo vai tro</p>
+                                   
+                                  </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Ho va ten"
+                                        formControlName="fullname" name="fullname" [(ngModel)]="staff.fullname">
+                                </div>
+                                <div *ngIf="fullname.invalid && (fullname.touched || fullname.dirty)">
+                                            
+                                    <p *ngIf="fullname.errors.required" class="alert alert-danger" role="alert"> Hãy điền Ho va ten</p>
+                                    <p *ngIf="fullname.errors.minlength; else patternS" class="alert alert-danger" role="alert"> Hãy điền lớn hơn 4 ký tự</p>
+                                    <ng-template #patternS>
+                                      <p *ngIf="fullname.errors.pattern" class="alert alert-danger" role="alert">Sai định dạng (Tên không được chứa dấu cách ở đầu) </p>
+                                    </ng-template>
+                                  </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Tên tài Khoản"
+                                        formControlName="user" name="username" [(ngModel)]="staff.username">
+                                </div>
+                                <div *ngIf="user.invalid && (user.touched || user.dirty)">
+                                            
+                                    <p *ngIf="user.errors.required" class="alert alert-danger" role="alert"> Hãy điền tên tài khoản</p>
+                                    <p *ngIf="user.errors.minlength; else patternS" class="alert alert-danger" role="alert"> Hãy điền lớn hơn 4 ký tự</p>
+                                    <ng-template #patternS>
+                                      <p *ngIf="user.errors.pattern" class="alert alert-danger" role="alert">Sai định dạng (Tên không được chứa dấu cách ở đầu) </p>
+                                    </ng-template>
+                                  </div>
+                                <!-- <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Số điện thoại"
+                                        formControlName="number">
+                                        
+                                </div>
+                                <div *ngIf="number.invalid && (number.touched || number.dirty)">
+                                    <p *ngIf="number.errors.maxlength" class="alert alert-danger" role="alert"> Số điện thoại không được quá 11 chữ số </p> 
+                                    <p *ngIf="number.errors.pattern" class="alert alert-danger" role="alert">Sai định dạng (chỉ chứa ký tự số)</p>
+                                  </div> -->
+                                <!-- <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Địa chỉ"
+                                        formControlName="address">
+                                       
+                                </div>
+                                <div *ngIf="address.invalid && (address.touched || address.dirty)">
+                                    <p *ngIf="address.errors.minlength; else patternS" class="alert alert-danger" role="alert"> Hãy điền lớn hơn 4 ký tự</p>
+                                    <ng-template #patternS>
+                                      <p *ngIf="address.errors.pattern" class="alert alert-danger" role="alert">Sai định dạng (Địa chỉ  không được chứa dấu cách ở đầu) </p>
+                                    </ng-template>
+                                  </div> -->
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Mật khẩu"
+                                        formControlName="pass" name="pass" [(ngModel)]="staff.pass">
+                                </div>
+                                <div *ngIf="pass.invalid && (pass.touched || pass.dirty)">
+                                            
+                                    <p *ngIf="pass.errors.required" class="alert alert-danger" role="alert"> Hãy điền mật khẩu</p>
+                                </div>
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" appConfValidator="pass" placeholder="Nhập lại mật khẩu"
+                                        formControlName="cfpass">
+                                        
+                                </div>
+                                <div *ngIf="cfpass.invalid && (cfpass.touched || cfpass.dirty)">                 
+                                    <p *ngIf="cfpass.errors.required" class="alert alert-danger" role="alert"> Hãy điền mật khẩu</p>
+                                    <p *ngIf="cfpass.errors.notEqual && !cfpass.errors.required" class="alert alert-danger" role="alert">Mật khẩu không trùng</p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="submit" value="Đăng ký" class="btn float-right login_btn">
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+          
+    </div>
+</div>
